@@ -2,9 +2,16 @@
 ClueCon 2019 Dangerous Demo - MathCheat
 
 This project is designed as an example to implement SignalWire's new NodeJS API.
-This project will implement the API leveraging the Relay Consumer.  
+It implements the API leveraging the Relay Consumer and demonstrates the asynchronization of a two-way communication paradigm leveraging some minor bot intelligence.
 
 This Bot simulates the ability to cheat on your math test by texting your equation to solve to the MathCheat Bot.
+
+## Goals of Project
+
+* Create a Fully Functional NodeJS Implementation of SignalWire's Messaging API.
+* Demonstrate asynchonization to simulate a two-party conversation.
+* Document how everything works.
+* Do it all in 100-lines of code or less (including comments)!
 
 ## Getting Started
 To run this project, you must have NodeJS installed.  You must also have a SignalWire account.
