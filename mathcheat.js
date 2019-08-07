@@ -48,8 +48,11 @@ const sendHTTP = (message, url) => {
     // transaction complete process result.
     res.on('end', () => {
       if (res.statusCode == 200) {
+        console.log("Responding with Answer: " + result);
         sendResponse(message, result);
       } else {
+        console.log("The formula entered is complete CRAP!");
+        console.log("Inform the user how to use the HELP command.");
         sendResponse(message, "\nDude, have you been drinking?\nWhatever you typed in was crap!\n\nClean it up and try again.\nYou can get assistance by typing HELP.");
       }
     });
@@ -76,8 +79,15 @@ const consumer = new RelayConsumer({
                      "Example: (2*3)+8/4*sqrt(81)";
       sendResponse(message, response);
     } else {
-      // User didn't request help... perform the lookup.
-      let encodedBody = 'https://api.mathjs.org/v4/?expr='+encodeURIComponent(message.body);
+
+      console.log("Formula Entered: " + message.body);
+
+      var formula = message.body;
+      formula = formula.replace('÷', '/');
+      formula = formula.replace('×', '*');
+  
+        // User didn't request help... perform the lookup.
+      let encodedBody = 'https://api.mathjs.org/v4/?expr='+encodeURIComponent(formula);
   
       console.log("HTTPS: " + encodedBody);
       sendHTTP(message, encodedBody.toLowerCase());
