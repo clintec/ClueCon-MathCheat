@@ -24,7 +24,9 @@ The next steps are to install the SignalWire API and other dependencies.
 Now you must obtain your SignalWire Space, ProductKey and APIToken.  This can be completed on your SignalWire dashboard.  Once you have both secrets add them into the (mathcheat.js) project.
 
 `const projectID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';`
+
 `const apiToken = 'PTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';`
+
 `const spaceURL = 'example.signalwire.com';`
 
 Now, obtain a DID (Phone Number) from SignalWire.  This will be the phone number you will need to text into.
@@ -38,5 +40,5 @@ To start the bot, simply perform the following at the command line:
 The bot is designed to direct the user to the HELP message if they enter a none equation.
 The HELP message will outline the math operands available and provide an example of how to use.
 
-To use the bot, simply type:  `help`
+To learn to use the bot, simply text:  `help`
 or an equation, like:  `2*128/4`
