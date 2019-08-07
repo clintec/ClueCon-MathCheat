@@ -56,7 +56,6 @@ const sendHTTP = (message, url) => {
         sendResponse(message, "\nDude, have you been drinking?\nWhatever you typed in was crap!\n\nClean it up and try again.\nYou can get assistance by typing HELP.");
       }
     });
-  
   }).on('error', (e) => {
     console.error(e);
   });  
@@ -98,4 +97,3 @@ const consumer = new RelayConsumer({
 
 // Start the consumer.
 consumer.run()
-
